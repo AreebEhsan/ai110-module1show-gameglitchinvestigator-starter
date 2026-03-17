@@ -25,6 +25,14 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
+- This project involved debugging and repairing an AI-generated Streamlit number guessing game. The goal was to analyze the behavior of the application, identify logical and state management bugs, and fix them while documenting how AI tools contributed to the debugging process.
+
+- Several bugs were identified during the investigation. The game accepted invalid guesses outside the allowed range (for example negative numbers), the hint system sometimes gave incorrect guidance, and the session state initialization caused incorrect values for attempts, score, and history at startup. These issues made the game behave inconsistently and sometimes appear broken.
+
+- To fix these problems, I corrected the session state initialization so that attempts start at zero and the game state resets properly when a new game begins. I added validation to reject guesses outside the allowed difficulty range and ensured that attempts are only consumed for valid guesses. I also refactored the guessing logic into `logic_utils.py` and corrected the hint logic so that guesses above the secret return "Too High" with a "Go LOWER" hint, and guesses below return "Too Low" with a "Go HIGHER" hint.
+
+- The fixes were verified using both manual testing through the Streamlit interface and automated testing using pytest. The automated tests confirmed that correct guesses return a win, higher guesses return "Too High", and lower guesses return "Too Low".
+
 - [ ] Describe the game's purpose.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
