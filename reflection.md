@@ -4,9 +4,9 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the secret number kept changing" or "the hints were backwards").
+- The first time I ran the game in Streamlit, the interface loaded, but the game state was already broken before I even started playing. On the main screen, it showed “Attempts allowed: 8” but also “Attempts left: 0” and “Attempts: 8,” which meant the game was already over as soon as it loaded.
+
+- One bug I noticed immediately was that the app accepted invalid guesses such as -54 even though the game said the valid range was 1 to 100. Another bug was that the score and history looked corrupted at startup, since the score was already negative and the history showed strange values like -324 and 2344. These issues showed that both the input validation and the session state logic were broken.
 
 ---
 
