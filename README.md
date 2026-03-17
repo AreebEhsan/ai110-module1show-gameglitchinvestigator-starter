@@ -33,13 +33,13 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - The fixes were verified using both manual testing through the Streamlit interface and automated testing using pytest. The automated tests confirmed that correct guesses return a win, higher guesses return "Too High", and lower guesses return "Too Low".
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+- [x] Detail which bugs you found.
+- [x] Explain what fixes you applied.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- ![Game Demo](game_fix.png)
 
 ## 🚀 Stretch Features
 
